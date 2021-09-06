@@ -20,8 +20,10 @@ export default class AdvancedStatistics extends Component {
                                 <p>Boost your brand recognition with each click. Generic links don’t mean a thing. 
                                     Branded links help instil confidence in your content.</p>
                             </div>
+                             <div className="linked-line"></div>
                         </div>
                     </div>
+                   
                     <div className="col col-12 col-md-4">
                         <div className="stats content-2">
                             <div className="advanced-icon">
@@ -33,6 +35,7 @@ export default class AdvancedStatistics extends Component {
                                       Knowing when and where people engage with your content helps inform better decisions.</p>
                             </div>
                         </div>
+                        <div className="linked-line"></div>
                     </div>
                     <div className="col col-12 col-md-4">
                         <div className="stats content-3">

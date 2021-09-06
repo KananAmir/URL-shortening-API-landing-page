@@ -37,7 +37,7 @@ export default class Header extends Component {
                               </ul>
                           </div>
                       </div>      
-                      <div className="col col-md-2 col-lg-2 d-flex text-right">
+                      <div className="col col-md-2 col-lg-2 d-flex">
                           <div className="login-signup">
                               <p className="login list-element">Login</p>
                               <Button className="sign-up"  shape="round">Sign Up</Button>

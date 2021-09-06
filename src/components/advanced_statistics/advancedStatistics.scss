@@ -4,6 +4,12 @@
     margin-top: -100px;
     padding: 10% 0;
     padding-top: 30%;
+    .linked-line{
+        background-color: #2bd0d0;
+        margin:  0 auto;
+        width: 8px;
+        height: 50px;
+    }
     h1{
         font-weight: bold;
         font-size: 28px;
@@ -26,18 +32,25 @@
         .advanced-content{
                background-color: #fff;
                padding: 50px 0 20px;
-               margin-bottom: 40px;
                border-radius: 5px;
         }
     }
 }
-
-@media only screen and (min-width: 770px){
+@media only screen and (min-width: 768px){
 
     .advanced-statistics{
         margin-top: -115px;
         padding: 10%;
         padding-bottom: 5%;
+        .linked-line{
+            position: absolute;
+            top: 60%;
+            right: -35px;
+            background-color: #2bd0d0;
+            margin: auto;
+            width: 50px;
+            height: 8px;
+        }
         h1{
             font-size: 40px;
         }
@@ -60,6 +73,11 @@
             p{
                 font-size: 15px;
             }
+        }
+        .linked-line{
+            position: absolute;
+            top: 60%;
+            right: -35px;
         }
     }
     

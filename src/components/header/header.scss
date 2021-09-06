@@ -1,0 +1,64 @@
+.header {
+    padding-top: 40px;   
+    width: 80%;
+    margin: 0 auto;  
+    .logo{
+        margin-top: -4px;
+    }
+    .list-element{
+        font-size: 15px;
+        font-weight: 700;
+        margin-right: 30px;
+        color: #9e9aa8;
+        cursor: pointer;
+    }
+    .list-element:hover{
+        color: #34313D;
+    }
+    .main-nav ul{
+        display: none;
+    }
+    .ant-btn-round{
+        padding: 0;
+        height: 40px;
+    }
+    .sign-up{
+        background-color: #2BD0D0;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 0px 25px;
+        margin-top: -7px;
+    }
+    .sign-up:hover{
+        background: #9AE3E3;
+        color: white;
+        border: white;
+    }
+    .login-signup{
+        display: none;
+    }
+    .menu-icon img{
+        width: 24px;
+        height: 21px;
+    }
+
+}  
+  @media only screen and (min-width: 768px) {
+
+.header{
+    padding-top: 60px;   
+    .main-nav ul{
+        display: flex;
+    }
+    .login-signup{
+        display: flex;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .logo{
+        margin-top: -5px;
+    }
+    }
+}

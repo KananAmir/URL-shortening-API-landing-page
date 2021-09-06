@@ -1,0 +1,104 @@
+.home{
+    .shorten-link{
+        display: flex;
+        flex-direction: column;
+        background: #3A3054;
+        padding: 24px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        margin: 5%;
+        background-image: url('../../assests/images/bg-shorten-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: right top;
+        .shorten-link-input{
+            margin-bottom: 16px;
+            height: 48px;
+            border-radius: 5px;
+        }
+        .shorten-it{
+            width: 100%;
+            background-color: #2BD0D0;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            border: none;
+            height: 48px;
+            border-radius: 5px;
+        }
+    }
+    .boost-links{
+        background: #3A3054;
+        text-align: center;
+        padding: 40px 0;
+        background-image: url('../../assests/images/bg-boost-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: 100% 20%;
+        h1{
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+        }
+        .get-started{
+            background-color: #2BD0D0;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 0px 35px;
+            height: 56px;
+            margin-top: 20px;
+            border: none;
+            margin-bottom: 5px;
+        }
+        .get-started:hover{
+            background: #9AE3E3;
+            color: white;
+            border: white;
+        }
+    }
+}
+@media only screen and (min-width: 770px) {
+    .home{
+        .shorten-link{
+            display: flex;
+            flex-direction: row;
+            background: #3A3054;
+            padding: 52px 64px;
+            border-radius: 10px;
+            margin: 30px 10%;
+            background-image: url('../../assests/images/bg-shorten-desktop.svg');
+            background-repeat: no-repeat;
+            background-position: top right;
+            .shorten-link-input{
+                margin-bottom: 0px;
+                height: 64px;
+                border-radius: 5px;
+                flex: 5;
+                margin-right: 20px;
+                padding-left: 20px;
+            }
+            .shorten-link-input::placeholder{
+              font-size: 20px;
+            }
+            .shorten-it{
+                width: 100%;
+                background-color: #2BD0D0;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                border: none;
+                height: 64px;
+                border-radius: 5px;
+                flex: 1;
+            }
+        }
+        .boost-links{
+            padding: 45px 0;
+            background-image: url('../../assests/images/bg-boost-desktop.svg');
+            background-repeat: no-repeat;
+            background-position: 100% 20%;
+            h1{
+                font-size: 40px;
+            }
+        }
+    }
+}

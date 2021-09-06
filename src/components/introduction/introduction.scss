@@ -1,0 +1,108 @@
+.introduction{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 5%;
+    .description {
+        margin-top: 60px;
+        order: 2;
+        text-align: center;
+        h1{
+            font-weight: bold;
+            font-size: 42px;
+            line-height: 42px;
+            letter-spacing: -2px;
+        }
+        p{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 36px;
+            letter-spacing: 0.15px;
+            color: #9E9AA8;
+            max-width: 540px;
+        }
+    }
+
+    .get-started{
+        background-color: #2BD0D0;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0px 35px;
+        height: 56px;
+        margin-top: 20px;
+        border: none;
+    }
+    .get-started:hover{
+        background: #9AE3E3;
+        color: white;
+        border: white;
+    }
+    .illustration{
+       order: 1;
+       .illustration-img{
+        overflow: hidden;
+        width: 100%;
+    }
+    }
+  
+}
+@media only screen and (min-width: 770px) {
+    .introduction{
+        display: flex;
+        flex-direction: row;
+        margin-top: 48px;
+        margin-left: 10%;
+        margin-right: 0;
+    
+    .description {
+        margin-top: 60px;
+        order: 1;
+        text-align: left;
+        p {
+            font-size: 22px;
+        }
+        h1 {
+            font-size: 60px;
+            line-height: 70px;
+            width: 80%;
+        }
+    }
+    .illustration{
+        order: 2;
+        .illustration-img{
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+}
+}
+@media only screen and (min-width: 1025px) {
+    .introduction{
+        display: flex;
+        flex-direction: row;
+        margin-top: 48px;
+        margin-left: 10%;
+        margin-right: 0;
+    
+    .description {
+        margin-top: 60px;
+        order: 1;
+        text-align: left;
+        p {
+            font-size: 22px;
+        }
+        h1 {
+            font-size: 80px;
+            line-height: 80px;
+            width: 85%;
+        }
+    }
+    .illustration{
+        order: 2;
+        .illustration-img{
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+}
+}

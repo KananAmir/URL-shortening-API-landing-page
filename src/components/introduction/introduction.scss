@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     margin: 50px 5%;
+    margin-right: 0;
+    overflow: hidden;
     .description {
         margin-top: 60px;
         order: 2;
@@ -41,7 +43,7 @@
        order: 1;
        .illustration-img{
         overflow: hidden;
-        width: 100%;
+        width: 120%;
     }
     }
   
@@ -70,8 +72,7 @@
     .illustration{
         order: 2;
         .illustration-img{
-            overflow: hidden;
-            width: 100%;
+            width: 110%;
         }
     }
 }
@@ -97,12 +98,5 @@
             width: 85%;
         }
     }
-    .illustration{
-        order: 2;
-        .illustration-img{
-            overflow: hidden;
-            width: 100%;
-        }
-    }
-}
+   }
 }

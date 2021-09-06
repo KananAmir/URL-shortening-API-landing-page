@@ -33,8 +33,8 @@ export default class HomePage extends React.Component<{
         <Introduction/>
         <div className="shorten-link">
           <Input
-                className="shorten-link-input"
-                placeholder="Shorten a link here.."
+              className="shorten-link-input"
+              placeholder="Shorten a link here.."
           />
           <Button className="shorten-it" >Shorten It!</Button>
         </div>

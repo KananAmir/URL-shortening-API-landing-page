@@ -1,0 +1,66 @@
+.advanced-statistics{
+    text-align: center;
+    background: #EFF1F7;
+    margin-top: -100px;
+    padding: 10% 0;
+    padding-top: 30%;
+    h1{
+        font-weight: bold;
+        font-size: 28px;
+    }
+    p{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        color: #9E9AA8;
+        margin-bottom: 40px;
+        padding: 0 5%;
+    }
+    .stats{
+        .advanced-icon img{
+            border-radius: 50%;
+            background: #3A3054;
+            padding: 20px;
+            margin-bottom: -40px;
+        }
+        .advanced-content{
+               background-color: #fff;
+               padding: 50px 0 20px;
+               margin-bottom: 40px;
+               border-radius: 5px;
+        }
+    }
+}
+
+@media only screen and (min-width: 770px){
+
+    .advanced-statistics{
+        margin-top: -115px;
+        padding: 10%;
+        padding-bottom: 5%;
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 32px;
+            display: inline-block;
+            max-width: 600px;
+        }
+        .content-2{
+            margin-top: 40px;
+        }
+        .content-3{
+            margin-top: 80px;
+        }
+        .stats{
+            h1{
+                font-size: 22px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+    
+}

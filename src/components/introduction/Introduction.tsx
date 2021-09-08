@@ -9,15 +9,15 @@ export default class Introduction extends Component {
                 <div className='description'>
                     <h1>More than just shorter links</h1>
                     <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
-                    <Button className="get-started"  shape="round">Get Started</Button>
+                    <Button className="get-started" shape="round">Get Started</Button>
                 </div>
 
                 <div className='illustration'>
                     <img className="illustration-img" src={ImgWorking} alt='illustration of a person working' />
                 </div>
-        
+
             </div>
-      
+
         )
     }
 }

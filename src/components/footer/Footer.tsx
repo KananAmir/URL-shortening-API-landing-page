@@ -12,7 +12,7 @@ export default class Footer extends Component {
             <div className="footer">
                 <div className="row">
                     <div className="col col-12 col-md-3 col-lg-3">
-                         <NavLink exact to = "/"><img className="logo-footer" src={logo} alt='Shortly' /> </NavLink>
+                        <NavLink exact to="/"><img className="logo-footer" src={logo} alt='Shortly' /> </NavLink>
                     </div>
                     <div className="col col-12 col-md-5 col-lg-6">
                         <div className="row">

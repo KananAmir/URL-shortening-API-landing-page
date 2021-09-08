@@ -1,39 +1,47 @@
-.footer{
+.footer {
     width: 100%;
     padding: 40px 10%;
-    margin: 0 auto;  
+    margin: 0 auto;
     background: #232127;
     color: white;
     text-align: center;
-    .logo-footer{
-    filter: brightness(0) invert(1);
-    margin-bottom: 25px;
+
+    .logo-footer {
+        filter: brightness(0) invert(1);
+        margin-bottom: 25px;
     }
-    .social-icons{
+
+    .social-icons {
         text-align: center;
         margin-top: 10px;
-        .icons{
+
+        .icons {
             margin: 10px;
             cursor: pointer;
         }
-        .icons:hover{
+
+        .icons:hover {
             filter: brightness(0) saturate(100%) invert(83%) sepia(28%) saturate(1143%) hue-rotate(127deg) brightness(84%) contrast(94%);
         }
     }
-    ul{
+
+    ul {
         list-style: none;
         margin-left: -30px;
         color: #BFBFBF;
         font-size: 15px
     }
-    ul li{
-      margin-bottom: 10px;
-      cursor: pointer;
+
+    ul li {
+        margin-bottom: 10px;
+        cursor: pointer;
     }
-    ul li:hover{
-      color: #2BD0D0;
+
+    ul li:hover {
+        color: #2BD0D0;
     }
-    h2{
+
+    h2 {
         color: white;
         font-size: 16px;
         margin: 20px 0;
@@ -42,26 +50,30 @@
 
 @media only screen and (min-width: 768px) {
 
-    .footer{
+    .footer {
         width: 100%;
         padding: 50px 10%;
-        margin: 0 auto;  
+        margin: 0 auto;
         background: #232127;
         color: white;
         text-align: left;
-        .logo-footer{
-        filter: brightness(0) invert(1);
+
+        .logo-footer {
+            filter: brightness(0) invert(1);
         }
-        .social-icons{
+
+        .social-icons {
             text-align: right;
             margin-top: 0;
         }
-        ul{
+
+        ul {
             list-style: none;
             text-align: left;
             margin-left: -40px;
         }
-        h2{
+
+        h2 {
             margin: 0;
             margin-bottom: 25px;
         }

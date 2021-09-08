@@ -1,4 +1,4 @@
-.hamburger-menu{
+.hamburger-menu {
     background: #3A3054;
     border-radius: 10px;
     width: 90%;
@@ -7,36 +7,43 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    .show-menu{
+
+    .show-menu {
         display: block;
     }
-    .hide-menu{
+
+    .hide-menu {
         display: none;
     }
-    .menu-nav ul{
-      padding: 0;
+
+    .menu-nav ul {
+        padding: 0;
     }
-    .menu-nav ul li{
+
+    .menu-nav ul li {
         list-style: none;
         color: white;
         font-weight: bold;
         font-size: 18px;
         padding-top: 40px;
     }
-    .login{
+
+    .login {
         color: white;
         font-weight: bold;
         font-size: 18px;
         padding-top: 40px;
     }
-    .line{
+
+    .line {
         background: #9E9AA8;
         height: 2px;
         margin-top: 30px;
         opacity: .3;
-        margin: 0 10% ;
+        margin: 0 10%;
     }
-    .menu-sign-up{
+
+    .menu-sign-up {
         background-color: #2BD0D0;
         color: white;
         font-weight: bold;
@@ -49,8 +56,9 @@
     }
 
 }
+
 @media only screen and (min-width: 768px) {
-    .hamburger-menu{
+    .hamburger-menu {
         display: none;
     }
 }

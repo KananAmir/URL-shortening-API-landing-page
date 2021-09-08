@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const token = localStorage.getItem('token');
-if (token) {
-    axios.defaults.headers.common['Authorization'] = token;
-}
+// const token = localStorage.getItem('token');
+// if (token) {
+//     axios.defaults.headers.common['Authorization'] = token;
+// }
 
 // Add a request interceptor
 axios.interceptors.request.use((config) => {

@@ -1,20 +1,23 @@
-.advanced-statistics{
+.advanced-statistics {
     text-align: center;
     background: #EFF1F7;
     margin-top: -100px;
     padding: 10% 0;
-    padding-top: 30%;
-    .linked-line{
+    padding-top: 50%;
+
+    .linked-line {
         background-color: #2bd0d0;
-        margin:  0 auto;
+        margin: 0 auto;
         width: 8px;
         height: 50px;
     }
-    h1{
+
+    h1 {
         font-weight: bold;
         font-size: 28px;
     }
-    p{
+
+    p {
         font-weight: 500;
         font-size: 16px;
         line-height: 28px;
@@ -22,27 +25,33 @@
         margin-bottom: 40px;
         padding: 0 5%;
     }
-    .stats{
-        .advanced-icon img{
+
+    .stats {
+        .advanced-icon img {
             border-radius: 50%;
             background: #3A3054;
             padding: 20px;
             margin-bottom: -40px;
         }
-        .advanced-content{
-               background-color: #fff;
-               padding: 50px 0 20px;
-               border-radius: 5px;
+
+        .advanced-content {
+            background-color: #fff;
+            padding: 50px 0 20px;
+            border-radius: 5px;
         }
     }
 }
-@media only screen and (min-width: 768px){
 
-    .advanced-statistics{
+@media only screen and (min-width: 768px) {
+
+    .advanced-statistics {
         margin-top: -115px;
         padding: 10%;
+        padding-top: 12%;
         padding-bottom: 5%;
-        .linked-line{
+        padding-top: 20%;
+
+        .linked-line {
             position: absolute;
             top: 60%;
             right: -35px;
@@ -51,34 +60,52 @@
             width: 50px;
             height: 8px;
         }
-        h1{
+
+        h1 {
             font-size: 40px;
         }
-        p{
+
+        p {
             font-size: 18px;
             line-height: 32px;
             display: inline-block;
             max-width: 600px;
         }
-        .content-2{
+
+        .content-2 {
             margin-top: 40px;
         }
-        .content-3{
+
+        .content-3 {
             margin-top: 80px;
         }
-        .stats{
-            h1{
+
+        .stats {
+            h1 {
                 font-size: 22px;
             }
-            p{
+
+            p {
                 font-size: 15px;
             }
         }
-        .linked-line{
+
+        .linked-line {
             position: absolute;
             top: 60%;
             right: -35px;
         }
     }
-    
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .advanced-statistics {
+        margin-top: -115px;
+        padding: 10%;
+        padding-top: 12%;
+        padding-bottom: 5%;
+        padding-top: 15%;
+
+    }
 }

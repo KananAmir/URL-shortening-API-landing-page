@@ -1,20 +1,23 @@
-.introduction{
+.introduction {
     display: flex;
     flex-direction: column;
     margin: 50px 5%;
     margin-right: 0;
     overflow: hidden;
+
     .description {
         margin-top: 60px;
         order: 2;
         text-align: center;
-        h1{
+
+        h1 {
             font-weight: bold;
             font-size: 42px;
             line-height: 42px;
             letter-spacing: -2px;
         }
-        p{
+
+        p {
             font-weight: 500;
             font-size: 18px;
             line-height: 36px;
@@ -24,7 +27,7 @@
         }
     }
 
-    .get-started{
+    .get-started {
         background-color: #2BD0D0;
         color: white;
         font-weight: bold;
@@ -34,69 +37,80 @@
         margin-top: 20px;
         border: none;
     }
-    .get-started:hover{
+
+    .get-started:hover {
         background: #9AE3E3;
         color: white;
         border: white;
     }
-    .illustration{
-       order: 1;
-       .illustration-img{
-        overflow: hidden;
-        width: 120%;
+
+    .illustration {
+        order: 1;
+
+        .illustration-img {
+            overflow: hidden;
+            width: 120%;
+        }
     }
-    }
-  
+
 }
+
 @media only screen and (min-width: 770px) {
-    .introduction{
+    .introduction {
         display: flex;
         flex-direction: row;
         margin-top: 48px;
         margin-left: 10%;
         margin-right: 0;
-    
-    .description {
-        margin-top: 60px;
-        order: 1;
-        text-align: left;
-        p {
-            font-size: 22px;
+
+        .description {
+            margin-top: 60px;
+            order: 1;
+            text-align: left;
+
+            p {
+                font-size: 22px;
+            }
+
+            h1 {
+                font-size: 60px;
+                line-height: 70px;
+                width: 80%;
+            }
         }
-        h1 {
-            font-size: 60px;
-            line-height: 70px;
-            width: 80%;
-        }
-    }
-    .illustration{
-        order: 2;
-        .illustration-img{
-            width: 110%;
+
+        .illustration {
+            order: 2;
+
+            .illustration-img {
+                width: 110%;
+            }
         }
     }
 }
-}
+
 @media only screen and (min-width: 1025px) {
-    .introduction{
+    .introduction {
         display: flex;
         flex-direction: row;
         margin-top: 48px;
         margin-left: 10%;
         margin-right: 0;
-    
-    .description {
-        margin-top: 60px;
-        order: 1;
-        text-align: left;
-        p {
-            font-size: 22px;
-        }
-        h1 {
-            font-size: 80px;
-            line-height: 80px;
-            width: 85%;
+
+        .description {
+            margin-top: 60px;
+            order: 1;
+            text-align: left;
+
+            p {
+                font-size: 22px;
+            }
+
+            h1 {
+                font-size: 80px;
+                line-height: 80px;
+                width: 85%;
+            }
         }
     }
-   }
 }

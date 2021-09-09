@@ -108,18 +108,20 @@ export default class HomePage extends React.Component<{
           <p className={`empty-error ${this.state.btnClicked ? `${this.state.errorMessage}` : ""}`}>Please add a link</p>
         </div>
 
-        <div className={this.state.shorteningLink?.result.original_link ? "result" : "d-none"}>
-          <div className="row m-0 pr-2">
+        <div className="result-and-statistics">
+          <div className={this.state.shorteningLink?.result.original_link ? "result" : "d-none"}>
+            <div className="row m-0 pr-2">
 
-            <p className="original col col-12 col-md-6 col-lg-7 mb-0 pr-0">{this.state.shorteningLink?.result.original_link}</p>
-            <p className="shortened col col-12 col-md-3 col-lg-3 mb-0">{this.state.shorteningLink?.result.full_short_link}</p>
-            <div className="col col-12 col-md-3 col-lg-2 m-0">
-              <Button className={`copy-btn mb-2 ${this.state.copied ? "copied" : " "}`} onClick={this.copyLink}>{this.state.copied ? "Copied" : "Copy"}</Button>
+              <p className="original col col-12 col-md-6 col-lg-7 mb-0 pr-0">{this.state.shorteningLink?.result.original_link}</p>
+              <p className="shortened col col-12 col-md-3 col-lg-3 mb-0">{this.state.shorteningLink?.result.full_short_link}</p>
+              <div className="col col-12 col-md-3 col-lg-2 m-0">
+                <Button className={`copy-btn mb-2 ${this.state.copied ? "copied" : " "}`} onClick={this.copyLink}>{this.state.copied ? "Copied" : "Copy"}</Button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <AdvancedStatistics />
+          <AdvancedStatistics />
+        </div>
 
         <div className="boost-links">
           <h1>Boost your links today</h1>

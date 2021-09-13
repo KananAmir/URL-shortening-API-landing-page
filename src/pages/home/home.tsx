@@ -4,23 +4,22 @@ import "./home.scss";
 import AppStore from "../../Store";
 import AdvancedStatistics from "../../components/advanced_statistics/AdvancedStatistics";
 import Introduction from "../../components/introduction/Introduction";
-import { Input, Button } from 'antd';
+import { Input, Button } from "antd";
 import { ChangeEvent } from "react";
-import { ShorteningLinkDto } from '../../core/interfaces/shorteningLinkDto'
+import { ShorteningLinkDto } from "../../core/interfaces/shorteningLinkDto";
 import { ApiResultDto } from "../../core/interfaces/apiResultDto";
-import ShortLinkService from '../../core/services/short_link_service'
+import ShortLinkService from "../../core/services/short_link_service";
 import { Modal } from "antd";
 
-
 interface MyState {
-  shorteningLink?: ShorteningLinkDto;
+  shorteningLink: ShorteningLinkDto[];
   link: string;
   apiResult: ApiResultDto[];
   btnClicked: boolean;
   inputError: string;
   errorMessage: string;
   input: string;
-  copied: boolean;
+  copiedIndex?: number;
 }
 @inject("appStore")
 @observer
@@ -45,22 +44,22 @@ export default class HomePage extends React.Component<{
 
   private shortLinkService: ShortLinkService = new ShortLinkService();
   state: MyState = {
-    shorteningLink: undefined,
+    shorteningLink: [],
     link: "",
     apiResult: [],
     btnClicked: false,
     inputError: "",
     errorMessage: "",
     input: "",
-    copied: false,
+    copiedIndex: undefined,
   };
 
   private getLink = async (link: string) => {
     try {
-      const shorteningLink = await this.shortLinkService.getLink(link);
-      console.log(shorteningLink)
+      const response = await this.shortLinkService.getLink(link);
+      console.log(response);
       this.setState({
-        shorteningLink,
+        shorteningLink: [response, ...this.state.shorteningLink],
       });
     } catch (error) {
       console.error(error);
@@ -68,29 +67,30 @@ export default class HomePage extends React.Component<{
         title: "Please add a valiable link",
       });
     }
-  }
+  };
 
   shorteningAddedLink = () => {
     this.setState({ btnClicked: true });
 
     if (this.state.link) {
       this.getLink(this.state.link);
-      this.setState({ input: '' })
+      this.setState({ input: "" });
+    } else {
+      this.setState({ errorMessage: "error-message" });
+      this.setState({ inputError: "input-error" });
     }
-    else {
-      this.setState({ errorMessage: "error-message" })
-      this.setState({ inputError: "input-error" })
-    }
-  }
+  };
   addingLink = (event: ChangeEvent<HTMLInputElement>) => {
     this.setState({ link: event.target.value });
     this.setState({ input: event.target.value });
   };
 
-  copyLink = () => {
-    this.setState({ copied: true });
-    navigator.clipboard.writeText(`${this.state.shorteningLink?.result.full_short_link}`);
-  }
+  copyLink = (index: number) => {
+    this.setState({ copiedIndex: index });
+    navigator.clipboard.writeText(
+      `${this.state.shorteningLink[index]?.result.full_short_link}`
+    );
+  };
 
   render() {
     return (
@@ -99,33 +99,57 @@ export default class HomePage extends React.Component<{
 
         <div className="shorten-link">
           <Input
-            className={`shorten-link-input ${this.state.btnClicked ? this.state.inputError : ""}`}
+            className={`shorten-link-input ${this.state.btnClicked ? this.state.inputError : ""
+              }`}
             placeholder="Shorten a link here.."
             onChange={this.addingLink}
             value={this.state.input}
           />
-          <Button className="shorten-it" onClick={this.shorteningAddedLink}>Shorten It!</Button>
-          <p className={`empty-error ${this.state.btnClicked ? `${this.state.errorMessage}` : ""}`}>Please add a link</p>
+          <Button className="shorten-it" onClick={this.shorteningAddedLink}>
+            Shorten It!
+          </Button>
+          <p
+            className={`empty-error ${this.state.btnClicked ? `${this.state.errorMessage}` : ""
+              }`}
+          >
+            Please add a link
+          </p>
         </div>
 
         <div className="result-and-statistics">
-          <div className={this.state.shorteningLink?.result.original_link ? "result" : "d-none"}>
-            <div className="row m-0 pr-2">
+          {this.state.shorteningLink.map((link, index) => {
+            const isCopied = this.state.copiedIndex === index;
 
-              <p className="original col col-12 col-md-6 col-lg-7 mb-0 pr-0">{this.state.shorteningLink?.result.original_link}</p>
-              <p className="shortened col col-12 col-md-3 col-lg-3 mb-0">{this.state.shorteningLink?.result.full_short_link}</p>
-              <div className="col col-12 col-md-3 col-lg-2 m-0">
-                <Button className={`copy-btn mb-2 ${this.state.copied ? "copied" : " "}`} onClick={this.copyLink}>{this.state.copied ? "Copied" : "Copy"}</Button>
+            return (
+              <div className={link?.result.original_link ? "result mb-3" : "d-none"}>
+                <div className="row m-0 pr-2">
+                  <p className="original col col-12 col-md-6 col-lg-7 mb-0 pr-0">
+                    {link?.result.original_link}
+                  </p>
+                  <p className="shortened col col-12 col-md-3 col-lg-3 mb-0">
+                    {link?.result.full_short_link}
+                  </p>
+                  <div className="col col-12 col-md-3 col-lg-2 m-0">
+                    <Button
+                      className={`copy-btn mb-2 ${isCopied ? "copied" : " "}`}
+                      onClick={() => this.copyLink(index)}
+                    >
+                      {isCopied ? "Copied" : "Copy"}
+                    </Button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
 
           <AdvancedStatistics />
         </div>
 
         <div className="boost-links">
           <h1>Boost your links today</h1>
-          <Button className="get-started" shape="round">Get Started</Button>
+          <Button className="get-started" shape="round">
+            Get Started
+          </Button>
         </div>
       </div>
     );
